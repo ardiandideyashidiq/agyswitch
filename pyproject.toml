@@ -16,6 +16,7 @@ dependencies = [
 
 [project.scripts]
 agyswitch = "agyswitch:main"
+ags = "agyswitch:main"
 
 [build-system]
 requires = ["uv_build>=0.13.7,<0.14.0"]
@@ -25,3 +26,11 @@ build-backend = "uv_build"
 dev = [
     "ruff>=0.17.5",
 ]
+
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]
+ignore = ["E501"]

@@ -1,2 +1,3 @@
-def main() -> None:
-    print("Hello from agyswitch!")
+from agyswitch.cli import main
+
+__all__ = ["main"]

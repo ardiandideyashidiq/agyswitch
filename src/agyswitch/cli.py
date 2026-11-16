@@ -112,6 +112,13 @@ def cmd_best(agy_args: list[str]) -> None:
     raise SystemExit(code)
 
 
+@cli.command("b", context_settings=dict(ignore_unknown_options=True))
+@click.argument("agy_args", nargs=-1, type=click.UNPROCESSED)
+def cmd_b(agy_args: list[str]) -> None:
+    """Short alias for 'best' (run agy with highest quota)."""
+    cmd_best(agy_args)
+
+
 @cli.command("quotas")
 @click.option("--details", "-d", is_flag=True, help="List quota for every individual model.")
 def cmd_quotas(details: bool = False) -> None:

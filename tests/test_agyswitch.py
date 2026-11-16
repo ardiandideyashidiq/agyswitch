@@ -72,5 +72,13 @@ class TestQuota(unittest.TestCase):
         self.assertEqual(format_duration(580000), "6d 17h")
 
 
+class TestCli(unittest.TestCase):
+    def test_b_alias_for_best(self):
+        from agyswitch.cli import cli
+
+        self.assertIn("best", cli.commands)
+        self.assertIn("b", cli.commands)
+
+
 if __name__ == "__main__":
     unittest.main()

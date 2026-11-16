@@ -21,7 +21,7 @@ Fast, zero-overhead profile and quota manager for the **Google Antigravity CLI (
 | `ags quotas` | View summary quotas (Gemini / Claude & GPT) |
 | `ags quotas -d` | View detailed per-model quota breakdown |
 | `ags run <name> -- <args>` | Run `agy` with a specific profile |
-| `ags best -- <args>` | Automatically run `agy` with highest quota profile |
+| `ags best -- <args>` (`ags b`) | Automatically run `agy` with highest quota profile |
 | `ags rename <old> <new>` | Rename an existing profile |
 | `ags delete <name>` | Delete a profile |
 
